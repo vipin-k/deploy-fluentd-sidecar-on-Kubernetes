@@ -1,0 +1,22 @@
+  kubectl create ns guestbook
+  kubectl apply -f guestbook.yaml --namespace=guestbook
+  kubectl get pods --namespace=guestbook
+  kubectl get ingress  --namespace=guestbook
+  kubectl describe ingress frontend  --namespace=guestbook
+  kubectl get pods --namespace=guestbook
+  kubectl logs frontend-6cb7f8bd65-9d74j --namespace=guestbook
+ --------------------------------------------------------------------------------
+  kubectl create ns sidecar
+  kubectl apply -f sidecar.yml
+  kubectl get ingress --namespace=sidecar
+  kubectl get pods --namespace=sidecar
+  kubectl logs web-6d6c5d974b-74phn --namespace=sidecar
+  kubectl exec web-6d6c5d974b-74phn -n sidecar -it -- sh
+ -------------------------------------------------------------------------------
+ kubectl apply -f sidecar.yml
+ kubectl get pods --namespace=sidecar
+ kubectl describe pods web-558bbb5557-45ntl --namespace=sidecar
+ kubectl get pods --namespace=sidecar
+ kubectl exec web-558bbb5557-45ntl -n sidecar -c fdlogger -it -- sh
+ kubectl logs web-769f84d975-4x4lt -c fdlogger -n sidecar
+ -----------------------------------------------------------------------------
