@@ -1,7 +1,6 @@
 # How to deploy fluentd sidecar on Kubernetes
 
-<b> How to deploy Fluentd Sidecar for application logs analysis on Kubernetes </b> <br>
- Refer below YouTube vidoes to complete the excerise:
+Refer below YouTube vidoes to complete the excerise:
  
 [![](http://img.youtube.com/vi/peKW3jQXBf4/0.jpg)](http://www.youtube.com/watch?v=peKW3jQXBf4 "")
 
